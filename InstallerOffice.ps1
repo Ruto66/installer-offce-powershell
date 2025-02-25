@@ -96,8 +96,8 @@ function Show-Logo {
                         |                             Office Installe's GUI                                   |
                         |                                                                                     |
                         |                                                                                     |
-                        |                                                                                     |
-                        |                                                                                     |
+                        |                                      0.1.1                                          |
+                        |                              Code by Maxim Ruto66                                   |
                         |                                                                                     |
                         |_____________________________________________________________________________________|
 "@
@@ -106,16 +106,17 @@ function Show-Logo {
 function Show-Menu {
     Write-Host "1. Install Office VISIO is Project. Office Full"
     Write-Host "2. Install Office don't VISIO is Project. Office NO Full"
-    Write-Host "3. Install Office 2024 on Windows 11"
-    Write-Host "4. EXIT"
+    Write-Host "3. Install Office 2024 on Windows 11 Beta Version"
+    Write-Host "4. Reteil to VL Tolls - Beta Version"
+    Write-Host "5. EXIT"
 }
 
 Show-Logo
 Show-Menu
 
 do {
-    $choice = Read-Host "(1-4):"
-} until ($choice -ge 1 -and $choice -le 4)
+    $choice = Read-Host "(1-5):"
+} until ($choice -ge 1 -and $choice -le 5)
 
 switch ($choice) {
     1 {
@@ -168,8 +169,8 @@ switch ($choice) {
                         |                              Office 2024 on Windows 11                              |
                         |                                                                                     |
                         |                                                                                     |
-                        |                                       Clouse                                        |
-                        |                                                                                     |
+                        |                                   Version  0.1.1                                    |
+                        |                                Code by Maxim Ruto66                                 |
                         |                                                                                     |
                         |_____________________________________________________________________________________|
 "@
@@ -182,45 +183,28 @@ switch ($choice) {
 Show-Logo
 Show-Menu
 do {
-    $choice1 = Read-Host "(1-2):"
-} until ($choice1 -ge 1 -and $choice1 -le 2)
+    $choice1 = Read-Host "(1-3):"
+} until ($choice1 -ge 1 -and $choice1 -le 3)
 switch ($choice1){
         1{
             # Определение XML структуры как строку
 $xmlContent = @"
-<Configuration ID="041092c8-0ee2-4afc-8c73-f1102be4e8a0">
+<Configuration ID="7a189364-5c40-4fe8-978a-86186a9a52d2">
   <Add OfficeClientEdition="64" Channel="PerpetualVL2024">
-    <Product ID="ProPlus2024Volume" PIDKEY="FXYTK-NJJ8C-GB6DW-3DYQT-6F7TH">
+    <Product ID="ProPlus2024Volume" PIDKEY="XJ2XN-FW8RK-P4HMP-DKDBV-GCVGB">
       <Language ID="ru-ru" />
-      <Language ID="en-us" />
-      <Language ID="MatchPreviousMSI" />
       <ExcludeApp ID="Lync" />
       <ExcludeApp ID="OneDrive" />
-      <ExcludeApp ID="OneNote" />
-      <ExcludeApp ID="Publisher" />
     </Product>
-    <Product ID="VisioPro2024Volume" PIDKEY="KNH8D-FGHT4-T8RK3-CTDYJ-K2HT4">
+    <Product ID="VisioPro2024Volume" PIDKEY="B7TN8-FJ8V3-7QYCP-HQPMV-YY89G">
       <Language ID="ru-ru" />
-      <Language ID="en-us" />
-      <Language ID="MatchPreviousMSI" />
       <ExcludeApp ID="Lync" />
       <ExcludeApp ID="OneDrive" />
-      <ExcludeApp ID="OneNote" />
-      <ExcludeApp ID="Publisher" />
     </Product>
-    <Product ID="ProjectPro2024Volume" PIDKEY="FTNWT-C6WBT-8HMGF-K9PRX-QV9H8">
+    <Product ID="ProjectPro2024Volume" PIDKEY="FQQ23-N4YCY-73HQ3-FM9WC-76HF4">
       <Language ID="ru-ru" />
-      <Language ID="en-us" />
-      <Language ID="MatchPreviousMSI" />
       <ExcludeApp ID="Lync" />
       <ExcludeApp ID="OneDrive" />
-      <ExcludeApp ID="OneNote" />
-      <ExcludeApp ID="Publisher" />
-    </Product>
-    <Product ID="LanguagePack">
-      <Language ID="ru-ru" />
-      <Language ID="en-us" />
-      <Language ID="MatchPreviousMSI" />
     </Product>
   </Add>
   <Property Name="SharedComputerLicensing" Value="0" />
@@ -230,11 +214,6 @@ $xmlContent = @"
   <Property Name="AUTOACTIVATE" Value="1" />
   <Updates Enabled="TRUE" />
   <RemoveMSI />
-  <AppSettings>
-    <User Key="software\microsoft\office\16.0\excel\options" Name="defaultformat" Value="60" Type="REG_DWORD" App="excel16" Id="L_SaveExcelfilesas" />
-    <User Key="software\microsoft\office\16.0\powerpoint\options" Name="defaultformat" Value="52" Type="REG_DWORD" App="ppt16" Id="L_SavePowerPointfilesas" />
-    <User Key="software\microsoft\office\16.0\word\options" Name="defaultformat" Value="ODT" Type="REG_SZ" App="word16" Id="L_SaveWordfilesas" />
-  </AppSettings>
 </Configuration>
 "@
         $currentDirectory = Split-Path -Parent $MyInvocation.MyCommand.Path
@@ -261,18 +240,15 @@ $xmlContent = @"
 $xmlObject = [xml]$xmlContent
 #########################################
 $xmlContent1 = @"
-<Configuration ID="1abeb455-e28a-40a2-b72f-6abac17aef95">
+<Configuration ID="80569198-7b5f-468f-bc8f-5bce496f196b">
   <Add OfficeClientEdition="64" Channel="PerpetualVL2024">
-    <Product ID="ProPlus2024Volume" PIDKEY="FXYTK-NJJ8C-GB6DW-3DYQT-6F7TH">
+    <Product ID="ProPlus2024Volume" PIDKEY="XJ2XN-FW8RK-P4HMP-DKDBV-GCVGB">
       <Language ID="ru-ru" />
-      <Language ID="en-us" />
-      <Language ID="MatchPreviousMSI" />
       <ExcludeApp ID="Lync" />
     </Product>
-    <Product ID="LanguagePack">
+    <Product ID="ProjectPro2024Volume" PIDKEY="FQQ23-N4YCY-73HQ3-FM9WC-76HF4">
       <Language ID="ru-ru" />
-      <Language ID="en-us" />
-      <Language ID="MatchPreviousMSI" />
+      <ExcludeApp ID="Lync" />
     </Product>
   </Add>
   <Property Name="SharedComputerLicensing" Value="0" />
@@ -282,11 +258,6 @@ $xmlContent1 = @"
   <Property Name="AUTOACTIVATE" Value="1" />
   <Updates Enabled="TRUE" />
   <RemoveMSI />
-  <AppSettings>
-    <User Key="software\microsoft\office\16.0\excel\options" Name="defaultformat" Value="60" Type="REG_DWORD" App="excel16" Id="L_SaveExcelfilesas" />
-    <User Key="software\microsoft\office\16.0\powerpoint\options" Name="defaultformat" Value="52" Type="REG_DWORD" App="ppt16" Id="L_SavePowerPointfilesas" />
-    <User Key="software\microsoft\office\16.0\word\options" Name="defaultformat" Value="ODT" Type="REG_SZ" App="word16" Id="L_SaveWordfilesas" />
-  </AppSettings>
 </Configuration>
 "@
         $currentDirectory = Split-Path -Parent $MyInvocation.MyCommand.Path
@@ -310,12 +281,11 @@ $xmlContent1 = @"
 
         }
         3{
-            Write-Host "END"
+            Write-Host ""
         }
 }
     }
     4{
-        Write-Host "END"
+        Write-Host ""
     }
 }
-
