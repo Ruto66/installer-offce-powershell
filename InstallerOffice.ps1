@@ -139,8 +139,9 @@ switch($choice){
         Start-Sleep -Seconds 60
         Remove-Item -Path $filePath
         Write-Host "XML файл успешно удалён в $filePath"
-        cscript "C:\Program Files\Microsoft Office\Office16\ospp.vbs" /dstatus >$env:userprofile'\desktop\54321.txt'
-        $data = Get-Content $env:userprofile'\desktop\54321.txt'
+        cscript "C:\Program Files\Microsoft Office\Office16\ospp.vbs" /dstatus >$env:userprofile'\appdata\local\temp\office.ver'
+        $data = Get-Content $env:userprofile'\appdata\local\temp\office.ver'
+        Remove-Item -file $env:userprofile'\appdata\local\temp\office.ver' -Force -ErrorAction SilentlyContinue
         foreach ($line in $data) {
             if ($line.StartsWith('LICENSE NAME')) {
                 $office = $line.substring($line.IndexOf('O'),9)
@@ -176,8 +177,9 @@ switch($choice){
         Start-Sleep -Seconds 60
         Remove-Item -Path $filePath
         Write-Host "XML файл успешно удалён в $filePath"
-        cscript "C:\Program Files\Microsoft Office\Office16\ospp.vbs" /dstatus >$env:userprofile'\desktop\54321.txt'
-        $data = Get-Content $env:userprofile'\desktop\54321.txt'
+        cscript "C:\Program Files\Microsoft Office\Office16\ospp.vbs" /dstatus >$env:userprofile'\appdata\local\temp\office.ver'
+        $data = Get-Content $env:userprofile'\appdata\local\temp\office.ver'
+        Remove-Item -file $env:userprofile'\appdata\local\temp\office.ver' -Force -ErrorAction SilentlyContinue
         foreach ($line in $data) {
             if ($line.StartsWith('LICENSE NAME')) {
                 $office = $line.substring($line.IndexOf('O'),9)
@@ -269,8 +271,9 @@ $xmlContent = @"
                     Start-Sleep -Seconds 120
                     Remove-Item -Path $filePath
                     Write-Host "XML файл успешно удалён в $filePath" 
-                    cscript "C:\Program Files\Microsoft Office\Office16\ospp.vbs" /dstatus >$env:userprofile'\desktop\54321.txt'
-                    $data = Get-Content $env:userprofile'\desktop\54321.txt'
+                    cscript "C:\Program Files\Microsoft Office\Office16\ospp.vbs" /dstatus >$env:userprofile'\appdata\local\temp\office.ver'
+                    $data = Get-Content $env:userprofile'\appdata\local\temp\office.ver'
+                    Remove-Item -file $env:userprofile'\appdata\local\temp\office.ver' -Force -ErrorAction SilentlyContinue
                     foreach ($line in $data) {
                         if ($line.StartsWith('LICENSE NAME')) {
                             $office = $line.substring($line.IndexOf('O'),9)
@@ -330,8 +333,9 @@ $xmlContent1 = @"
         Start-Sleep -Seconds 60
         Remove-Item -Path $filePath
         Write-Host "XML файл успешно удалён в $filePath"
-        cscript "C:\Program Files\Microsoft Office\Office16\ospp.vbs" /dstatus >$env:userprofile'\desktop\54321.txt'
-        $data = Get-Content $env:userprofile'\desktop\54321.txt'
+        cscript "C:\Program Files\Microsoft Office\Office16\ospp.vbs" /dstatus >$env:userprofile'\appdata\local\temp\office.ver'
+        $data = Get-Content $env:userprofile'\appdata\local\temp\office.ver'
+        Remove-Item -file $env:userprofile'\appdata\local\temp\office.ver' -Force -ErrorAction SilentlyContinue
         foreach ($line in $data) {
             if ($line.StartsWith('LICENSE NAME')) {
                 $office = $line.substring($line.IndexOf('O'),9)
