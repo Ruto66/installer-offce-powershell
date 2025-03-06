@@ -96,7 +96,7 @@ function Show-Logo {
                         |                             Office Installe's GUI                                   |
                         |                                                                                     |
                         |                                                                                     |
-                        |                                      0.1.1                                          |
+                        |                                      0.1.3                                          |
                         |                              Code by Maxim Ruto66                                   |
                         |                                                                                     |
                         |_____________________________________________________________________________________|
@@ -139,6 +139,23 @@ switch($choice){
         Start-Sleep -Seconds 60
         Remove-Item -Path $filePath
         Write-Host "XML файл успешно удалён в $filePath"
+        cscript "C:\Program Files\Microsoft Office\Office16\ospp.vbs" /dstatus >$env:userprofile'\desktop\54321.txt'
+        $data = Get-Content $env:userprofile'\desktop\54321.txt'
+        foreach ($line in $data) {
+            if ($line.StartsWith('LICENSE NAME')) {
+                $office = $line.substring($line.IndexOf('O'),9)
+                }
+        }
+        if ($office -eq 'Office 16') {cscript "C:\Program Files\Microsoft Office\Office16\ospp.vbs" /inpkey:XQNVK-8JYDB-WJ9W3-YJ8YR-WFG99} else {
+            if ($office -eq 'Office 19') {cscript "C:\Program Files\Microsoft Office\Office16\ospp.vbs" /inpkey:NMMKJ-6RK4F-KMJVX-8D9MJ-6MWKP} else {
+                if ($office -eq 'Office 21') {cscript "C:\Program Files\Microsoft Office\Office16\ospp.vbs" /inpkey:FXYTK-NJJ8C-GB6DW-3DYQT-6F7TH} else {
+                    if ($office -eq 'Office 24') {cscript "C:\Program Files\Microsoft Office\Office16\ospp.vbs" /inpkey:XJ2XN-FW8RK-P4HMP-DKDBV-GCVGB} else {
+                        Write-Host 'No the MS Office'
+                        break
+                        } } } }
+
+
+        Start-Process cmd.exe -ArgumentList "/c cscript ""C:\Program Files\Microsoft Office\Office16\ospp.vbs"" /act" -NoNewWindow -Wait
     }
     2{
         $currentDirectory = Split-Path -Parent $MyInvocation.MyCommand.Path
@@ -159,6 +176,23 @@ switch($choice){
         Start-Sleep -Seconds 60
         Remove-Item -Path $filePath
         Write-Host "XML файл успешно удалён в $filePath"
+        cscript "C:\Program Files\Microsoft Office\Office16\ospp.vbs" /dstatus >$env:userprofile'\desktop\54321.txt'
+        $data = Get-Content $env:userprofile'\desktop\54321.txt'
+        foreach ($line in $data) {
+            if ($line.StartsWith('LICENSE NAME')) {
+                $office = $line.substring($line.IndexOf('O'),9)
+                }
+        }
+        if ($office -eq 'Office 16') {cscript "C:\Program Files\Microsoft Office\Office16\ospp.vbs" /inpkey:XQNVK-8JYDB-WJ9W3-YJ8YR-WFG99} else {
+            if ($office -eq 'Office 19') {cscript "C:\Program Files\Microsoft Office\Office16\ospp.vbs" /inpkey:NMMKJ-6RK4F-KMJVX-8D9MJ-6MWKP} else {
+                if ($office -eq 'Office 21') {cscript "C:\Program Files\Microsoft Office\Office16\ospp.vbs" /inpkey:FXYTK-NJJ8C-GB6DW-3DYQT-6F7TH} else {
+                    if ($office -eq 'Office 24') {cscript "C:\Program Files\Microsoft Office\Office16\ospp.vbs" /inpkey:XJ2XN-FW8RK-P4HMP-DKDBV-GCVGB} else {
+                        Write-Host 'No the MS Office'
+                        break
+                        } } } }
+
+
+        Start-Process cmd.exe -ArgumentList "/c cscript ""C:\Program Files\Microsoft Office\Office16\ospp.vbs"" /act" -NoNewWindow -Wait
     }
     3{
         Write-Host "Office 2024 on Windows 11"
@@ -170,7 +204,7 @@ switch($choice){
                         |                              Office 2024 on Windows 11                              |
                         |                                                                                     |
                         |                                                                                     |
-                        |                                   Version  0.1.1                                    |
+                        |                                   Version  0.1.3                                    |
                         |                                Code by Maxim Ruto66                                 |
                         |                                                                                     |
                         |_____________________________________________________________________________________|
@@ -235,6 +269,23 @@ $xmlContent = @"
                     Start-Sleep -Seconds 120
                     Remove-Item -Path $filePath
                     Write-Host "XML файл успешно удалён в $filePath" 
+                    cscript "C:\Program Files\Microsoft Office\Office16\ospp.vbs" /dstatus >$env:userprofile'\desktop\54321.txt'
+                    $data = Get-Content $env:userprofile'\desktop\54321.txt'
+                    foreach ($line in $data) {
+                        if ($line.StartsWith('LICENSE NAME')) {
+                            $office = $line.substring($line.IndexOf('O'),9)
+                            }
+                    }
+                    if ($office -eq 'Office 16') {cscript "C:\Program Files\Microsoft Office\Office16\ospp.vbs" /inpkey:XQNVK-8JYDB-WJ9W3-YJ8YR-WFG99} else {
+                        if ($office -eq 'Office 19') {cscript "C:\Program Files\Microsoft Office\Office16\ospp.vbs" /inpkey:NMMKJ-6RK4F-KMJVX-8D9MJ-6MWKP} else {
+                            if ($office -eq 'Office 21') {cscript "C:\Program Files\Microsoft Office\Office16\ospp.vbs" /inpkey:FXYTK-NJJ8C-GB6DW-3DYQT-6F7TH} else {
+                                if ($office -eq 'Office 24') {cscript "C:\Program Files\Microsoft Office\Office16\ospp.vbs" /inpkey:XJ2XN-FW8RK-P4HMP-DKDBV-GCVGB} else {
+                                    Write-Host 'No the MS Office'
+                                    break
+                                    } } } }
+
+
+                    Start-Process cmd.exe -ArgumentList "/c cscript ""C:\Program Files\Microsoft Office\Office16\ospp.vbs"" /act" -NoNewWindow -Wait
                 }
                 2{
                 # Преобразование XML строки в объект XML
@@ -279,6 +330,23 @@ $xmlContent1 = @"
         Start-Sleep -Seconds 60
         Remove-Item -Path $filePath
         Write-Host "XML файл успешно удалён в $filePath"
+        cscript "C:\Program Files\Microsoft Office\Office16\ospp.vbs" /dstatus >$env:userprofile'\desktop\54321.txt'
+        $data = Get-Content $env:userprofile'\desktop\54321.txt'
+        foreach ($line in $data) {
+            if ($line.StartsWith('LICENSE NAME')) {
+                $office = $line.substring($line.IndexOf('O'),9)
+                }
+        }
+        if ($office -eq 'Office 16') {cscript "C:\Program Files\Microsoft Office\Office16\ospp.vbs" /inpkey:XQNVK-8JYDB-WJ9W3-YJ8YR-WFG99} else {
+            if ($office -eq 'Office 19') {cscript "C:\Program Files\Microsoft Office\Office16\ospp.vbs" /inpkey:NMMKJ-6RK4F-KMJVX-8D9MJ-6MWKP} else {
+                if ($office -eq 'Office 21') {cscript "C:\Program Files\Microsoft Office\Office16\ospp.vbs" /inpkey:FXYTK-NJJ8C-GB6DW-3DYQT-6F7TH} else {
+                    if ($office -eq 'Office 24') {cscript "C:\Program Files\Microsoft Office\Office16\ospp.vbs" /inpkey:XJ2XN-FW8RK-P4HMP-DKDBV-GCVGB} else {
+                        Write-Host 'No the MS Office'
+                        break
+                        } } } }
+
+
+        Start-Process cmd.exe -ArgumentList "/c cscript ""C:\Program Files\Microsoft Office\Office16\ospp.vbs"" /act" -NoNewWindow -Wait
 
                 }
                 3{
@@ -297,7 +365,7 @@ $xmlContent1 = @"
                         |                                       Tolls                                         |
                         |                                                                                     |
                         |                                                                                     |
-                        |                                   Version  0.1.1                                    |
+                        |                                   Version  0.1.3                                    |
                         |                                Code by Maxim Ruto66                                 |
                         |                                                                                     |
                         |_____________________________________________________________________________________|
