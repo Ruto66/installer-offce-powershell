@@ -96,7 +96,7 @@ function Show-Logo {
                         |                             Office Installe's GUI                                   |
                         |                                                                                     |
                         |                                                                                     |
-                        |                                      0.1.3                                          |
+                        |                                      0.1.4                                          |
                         |                              Code by Maxim Ruto66                                   |
                         |                                                                                     |
                         |_____________________________________________________________________________________|
@@ -136,7 +136,7 @@ switch($choice){
         Remove-Item -Path HKCU:\SOFTWARE\Microsoft\Office\16.0\Common\ExperimentConfigs -Recurse -Force -ErrorAction Ignore
         Remove-Item -Path HKCU:\SOFTWARE\Microsoft\Office\16.0\Common\ExperimentEcs -Recurse -Force -ErrorAction Ignore
         Start-Process -FilePath $currentDirectory\Setup.exe -ArgumentList "/configure",$currentDirectory\ConfigurationOffice2021Full.xml # Вывод объекта XML
-        Start-Sleep -Seconds 60
+        Start-Sleep -Seconds 300
         Remove-Item -Path $filePath
         Write-Host "XML файл успешно удалён в $filePath"
         cscript "C:\Program Files\Microsoft Office\Office16\ospp.vbs" /dstatus >$env:userprofile'\appdata\local\temp\office.ver'
@@ -174,7 +174,7 @@ switch($choice){
         Remove-Item -Path HKCU:\SOFTWARE\Microsoft\Office\16.0\Common\ExperimentConfigs -Recurse -Force -ErrorAction Ignore
         Remove-Item -Path HKCU:\SOFTWARE\Microsoft\Office\16.0\Common\ExperimentEcs -Recurse -Force -ErrorAction Ignore
         Start-Process -FilePath $currentDirectory\Setup.exe -ArgumentList "/configure",$currentDirectory\ConfigurationOffice2021_NO_VISIO_Project.xml # Вывод объекта XML
-        Start-Sleep -Seconds 60
+        Start-Sleep -Seconds 300
         Remove-Item -Path $filePath
         Write-Host "XML файл успешно удалён в $filePath"
         cscript "C:\Program Files\Microsoft Office\Office16\ospp.vbs" /dstatus >$env:userprofile'\appdata\local\temp\office.ver'
@@ -206,7 +206,7 @@ switch($choice){
                         |                              Office 2024 on Windows 11                              |
                         |                                                                                     |
                         |                                                                                     |
-                        |                                   Version  0.1.3                                    |
+                        |                                   Version  0.1.4                                    |
                         |                                Code by Maxim Ruto66                                 |
                         |                                                                                     |
                         |_____________________________________________________________________________________|
@@ -268,7 +268,7 @@ $xmlContent = @"
                     Remove-Item -Path HKCU:\SOFTWARE\Microsoft\Office\16.0\Common\ExperimentConfigs -Recurse -Force -ErrorAction Ignore
                     Remove-Item -Path HKCU:\SOFTWARE\Microsoft\Office\16.0\Common\ExperimentEcs -Recurse -Force -ErrorAction Ignore
                     Start-Process -FilePath $currentDirectory\Setup.exe -ArgumentList "/configure",$currentDirectory\ConfigurationOffice2024Full.xml # Вывод объекта XML
-                    Start-Sleep -Seconds 120
+                    Start-Sleep -Seconds 300
                     Remove-Item -Path $filePath
                     Write-Host "XML файл успешно удалён в $filePath" 
                     cscript "C:\Program Files\Microsoft Office\Office16\ospp.vbs" /dstatus >$env:userprofile'\appdata\local\temp\office.ver'
@@ -330,7 +330,7 @@ $xmlContent1 = @"
         Remove-Item -Path HKCU:\SOFTWARE\Microsoft\Office\16.0\Common\ExperimentConfigs -Recurse -Force -ErrorAction Ignore
         Remove-Item -Path HKCU:\SOFTWARE\Microsoft\Office\16.0\Common\ExperimentEcs -Recurse -Force -ErrorAction Ignore
         Start-Process -FilePath $currentDirectory\Setup.exe -ArgumentList "/configure",$currentDirectory\ConfigurationOffice2024.xml # Вывод объекта XML
-        Start-Sleep -Seconds 60
+        Start-Sleep -Seconds 300
         Remove-Item -Path $filePath
         Write-Host "XML файл успешно удалён в $filePath"
         cscript "C:\Program Files\Microsoft Office\Office16\ospp.vbs" /dstatus >$env:userprofile'\appdata\local\temp\office.ver'
@@ -369,7 +369,7 @@ $xmlContent1 = @"
                         |                                       Tolls                                         |
                         |                                                                                     |
                         |                                                                                     |
-                        |                                   Version  0.1.3                                    |
+                        |                                   Version  0.1.4                                    |
                         |                                Code by Maxim Ruto66                                 |
                         |                                                                                     |
                         |_____________________________________________________________________________________|
